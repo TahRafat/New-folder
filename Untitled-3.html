@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Integrity Subscription Service (AISS)</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            background: #004080;
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+        header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #ffa500;
+        }
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Hero section styles */
+        .hero {
+            background: url('hero-image.jpg') center/cover no-repeat;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .cta-button {
+            background: #007acc;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            font-size: 1em;
+        }
+        .cta-button:hover {
+            background: #005fa3;
+            transform: scale(1.05);
+        }
+
+        /* Section styles */
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+            background: white;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #004080;
+        }
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .resource-grid div {
+            background: #f0f0f0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .resource-grid div:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Subscription plan styles */
+        .subscription-plans {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .plan {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+        .plan:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .plan h3 {
+            color: #004080;
+            margin-bottom: 10px;
+        }
+
+        /* Footer styles */
+        .footer {
+            background: #004080;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        /* Media queries for responsive design */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+            .menu-icon {
+                display: block;
+                margin-right: 20px;
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">AISS</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav id="navbar">
+        <a href="#home">Home</a>
+        <a href="#resources">Resource Library</a>
+        <a href="#subscription">Subscription</a>
+        <a href="#support">Support</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+    <button class="cta-button">Login/Signup</button>
+</header>
+
+<div class="hero" id="home">
+    <h1>Empowering Academic Integrity for Every Student</h1>
+    <button class="cta-button">Join Us Today!</button>
+</div>
+
+<section class="section" id="features">
+    <h2>Featured Resources</h2>
+    <div class="resource-grid">
+        <div>Video Tutorial 1</div>
+        <div>Article on Citation</div>
+        <div>Quiz on Plagiarism</div>
+    </div>
+    <div class="testimonial">"AISS has transformed my approach to academic integrity!" - Student A</div>
+</section>
+
+<section class="section" id="about">
+    <h2>About Us</h2>
+    <p>Our mission is to foster a culture of academic integrity among students and educators at the University of Dubai.</p>
+</section>
+
+<section class="section" id="features">
+    <h2>Features</h2>
+    <ul>
+        <li>High-quality educational resources including video tutorials and articles.</li>
+        <li>Flexible subscription tiers: Basic, Premium, and Institutional.</li>
+        <li>Personalized support through virtual office hours with experts.</li>
+        <li>Community engagement through workshops and mentorship programs.</li>
+    </ul>
+</section>
+
+<section class="section" id="subscription">
+    <h2>Subscription Plans</h2>
+    <div class="subscription-plans">
+        <div class="plan">
+            <h3>Basic Plan</h3>
+            <p>Access to essential resources</p>
+            <p><strong>$10/month</strong></p>
+            <button class="cta-button" onclick="alert('Signed up for Basic Plan!')">Subscribe</button>
+        </div>
+        <div class="plan">
+            <h3>Premium Plan</h3>
+            <p>Includes personalized support</p>
+            <p><strong>$20/month</strong></p>
+            <button class="cta-button" onclick="alert('Signed up for Premium Plan!')">Subscribe</button>
+        </div>
+        <div class="plan">
+            <h3>Institutional Plan</h3>
+            <p>Custom solutions for universities</p>
+            <p><strong>Contact for pricing</strong></p>
+            <button class="cta-button" onclick="alert('Contact us for Institutional Plan!')">Inquire</button>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="resources">
+    <h2>Resource Library</h2>
+    <div class="resource-grid">
+        <div>Video: Understanding Plagiarism</div>
+        <div>Article: Proper Citation Techniques</div>
+        <div>Quiz: Test Your Knowledge on Academic Integrity</div>
+    </div>
+    <button class="cta-button" onclick="alert('More resources coming soon!')">View More Resources</button>
+</section>
+
+<section class="section" id="support">
+    <h2>Support</h2>
+    <p>Access our virtual office hours and chat support for any questions.</p>
+    <div>
+        <h3>Virtual Office Hours</h3>
+        <p>Check our calendar for available slots.</p>
+    </div>
+    <div>
+        <h3>Chat Support</h3>
+        <button class="cta-button" onclick="alert('Chat support coming soon!')">Chat Now</button>
+    </div>
+    <div>
+        <h3>FAQs</h3>
+        <ul>
+            <li>What is academic integrity?</li>
+            <li>How do I subscribe?</li>
+            <li>What resources are available?</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@aiss.ud.edu</p>
+    <p>Phone: +971 123 4567</p>
+    <form>
+        <label for="feedback">Feedback:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br>
+        <button type="submit" class="cta-button">Submit</button>
+    </form>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2024 Academic Integrity Subscription Service. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Smooth scrolling for navigation
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Toggle mobile menu
+    function toggleMenu() {
+        const navbar = document.getElementById('navbar');
+        navbar.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
